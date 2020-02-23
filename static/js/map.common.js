@@ -743,7 +743,8 @@ function getPercentageCssColor(value, perfectVal, goodVal, okVal, mehVal) {
 
 function getPokemonRawIconUrl(p) {
     if (!generateImages) {
-        return `static/icons/${p.pokemon_id}.png`
+        // return `static/icons/${p.pokemon_id}.png`
+        return `https://github.com/ZeChrales/PogoAssets/raw/master/pokemon_icons/pokemon_icon_${p.pokemon_id}_00.png`
     }
     var url = 'pkm_img?raw=1&pkm=' + p.pokemon_id
     var props = ['gender', 'form', 'costume', 'shiny']
@@ -758,7 +759,8 @@ function getPokemonRawIconUrl(p) {
 
 function getPokemonMapIconUrl(pokemon) {
     if (!generateImages) {
-        return `static/icons/${pokemon.pokemon_id}.png`
+        // return `static/icons/${pokemon.pokemon_id}.png`
+        return `https://github.com/ZeChrales/PogoAssets/raw/master/pokemon_icons/pokemon_icon_${pokemon.pokemon_id}_00.png`
     }
 
     let genderParam = pokemon.gender ? `&gender=${pokemon.gender}` : ''
