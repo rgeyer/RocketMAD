@@ -145,7 +145,8 @@ function getPokemonRarityName(pokemonId) {
 
 function getPokemonRawIconUrl(p) {
     if (!serverSettings.generateImages) {
-        return `static/icons/${p.pokemon_id}.png`
+        // return `static/icons/${p.pokemon_id}.png`
+        return 'https://github.com/ZeChrales/PogoAssets/raw/master/pokemon_icons/pokemon_icon_${p.pokemon_id}.png'
     }
     var url = 'pkm_img?raw=1&pkm=' + p.pokemon_id
     var props = ['gender', 'form', 'costume', 'shiny']
@@ -160,7 +161,8 @@ function getPokemonRawIconUrl(p) {
 
 function getPokemonMapIconUrl(pokemon) {
     if (!serverSettings.generateImages) {
-        return `static/icons/${pokemon.pokemon_id}.png`
+        // return `static/icons/${pokemon.pokemon_id}.png`
+        return 'https://github.com/ZeChrales/PogoAssets/raw/master/pokemon_icons/pokemon_icon_${pokemon.pokemon_id}.png'
     }
 
     let genderParam = pokemon.gender ? `&gender=${pokemon.gender}` : ''
